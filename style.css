@@ -1,0 +1,290 @@
+body,html{
+    max-width: 100% !important;
+    overflow-x: hidden;
+    
+}
+
+.btn:focus{
+    box-shadow: 0 0 0 .25rem rgba(253, 141, 13, 0.25);
+}
+
+body{
+    background-image: url(src/bg-body.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.font-main{
+    font-family: "Passero One", sans-serif !important;
+    color: #000;
+}
+
+.btn.rounded-circle{
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dedede;
+}
+
+
+footer a{
+    text-decoration: none;
+    color: #131313;
+}
+
+footer a:hover{
+    color: #dedede;
+}
+
+footer .btn.rounded-circle{
+    width: 56px;
+    height: 56px;
+}
+
+footer .btn.rounded-circle:hover{
+    background-color: #dedede;
+    color: #f46a2f;
+}
+
+.btn.rounded-circle:hover{
+    background-color: transparent;
+    color: #dedede;
+}
+
+.text-main{
+    color: #f46a2f;
+}
+
+.text-second{
+    color: #dedede !important;
+}
+
+.text-orange{
+    color: #ff9264;
+}
+
+a.text-second:hover{
+    color: #fff !important;
+}
+
+.bg-black{
+    background-color: #000;
+}
+
+.bg-main{
+    background-color: #f46a2f;
+}
+
+.bg-main-transparent{
+    background-color: rgba(255, 68, 0, 0.6);
+}
+
+.circle{
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.angle{
+    transform: rotate(3deg);
+}
+
+.angle-box{
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+}
+
+.mt-6{
+    margin-top: 120px !important;
+}
+
+.angle-rect{
+    color: #ff7151;
+    transform: rotate(3deg);
+    border-top: 10px solid ;
+    border-bottom: 10px solid ;
+    position: absolute;
+    left: -50px;
+    right: -50px;
+    top: 0;
+    bottom: 0;
+}
+
+.angle-row{
+    padding-bottom: 50px !important;
+    padding-top: 50px !important;
+}
+
+
+
+.btn.bg-main:hover{
+    color: #fff !important;
+    background-color: #000 !important;
+}
+
+.btn.bg-black:hover{
+    color: #f46a2f !important;
+}
+
+.btn-outline-black{
+    border: 1px solid #000;
+    color: #000;
+}
+
+.btn-outline-black:hover{
+    background-color: #000;
+    color: #f46a2f;
+}
+
+.angle-rect::after{
+    content: " ";
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.bg-img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.z-1{
+    z-index: 1;
+}
+
+.z-2{
+    z-index: 2;
+}
+
+.z-3{
+    z-index: 3;
+}
+
+/* h1 */
+
+h1 span.font-main{
+    font-size: 3em;
+}
+
+.btn-dish{
+    transition: all .3s linear;
+}
+
+.btn-dish:hover{
+    transform: scale(.9);
+}
+
+
+
+
+@media only screen and (max-width: 420px) {
+    h1 span.font-main{
+        font-size: 2.4em;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    h1 span.font-main{
+        font-size: 2em;
+    }
+}
+
+/* ROTATING IMG ANIMATION */
+.rotating-img{
+    animation-name: rotateimg;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform: rotateZ(0deg);
+}
+
+@keyframes rotateimg {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(2deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+
+/* SCROLLING BG ANIMATION */
+.bg-img-animated{
+    background-position: 0% 0%;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: bgImgAnimated;
+}
+
+@keyframes bgImgAnimated {
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 100% 100%;
+    }
+}
+
+
+/* FAST CALL ICON */
+
+#fast-call{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    bottom: 10%;
+    right: -150px;
+    width: 200px;
+    height: 70px;
+    background-color: #ff7151;
+    z-index: 100;
+    border-radius: 35px 0 0 35px;
+    transition: all .4s ease-in-out;
+}
+
+#fast-call.active{
+    right: 0;
+}
+
+#fast-call-button{
+    background-color: transparent;
+    height: 100%;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #dedede;
+}
+
+#fast-call-button:focus{
+    box-shadow: none !important;
+}
+
+#fast-call-button:hover{
+    color: #000;
+}
+
+#fast-call a{
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+
+#fast-call a:hover{
+    color: #000 !important;
+}
